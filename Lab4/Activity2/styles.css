@@ -1,0 +1,19 @@
+p {
+    font-size: 20pt;
+    font-family: Arial, Helvetica, sans-serif
+}
+.highlight {
+    background-color: yellow;
+}
+#special {
+    color: #e655df;
+    font-weight: bold;
+    text-decoration: underline;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px
+}
+
+a:hover {
+    color: red;
+}

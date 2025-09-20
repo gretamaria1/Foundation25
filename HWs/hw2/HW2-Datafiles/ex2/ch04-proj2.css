@@ -23,4 +23,134 @@ h1 {
 }
 
 /* add styles here */
+body {
+   padding: 40px;
+}
 
+section {
+   width: 910px;
+   box-shadow: 0 0 10px rgba(73, 76, 78, 0.35);
+   background-color: #e4e7eb;
+   text-align: center;
+}
+
+.column {
+   display: inline-block;
+   width: 300px;
+   background-color: #fff; 
+}
+
+.column h3 {
+   font-size: 24px;
+   font-weight: 600;
+   padding: 10px 0;
+}
+
+.column:nth-of-type(1) .price { 
+   background-color: #5BB189;
+}
+.column:nth-of-type(2) .price { 
+   background-color: #4B0082;
+   color: #fff;
+}
+.column:nth-of-type(3) .price { 
+   background-color: #ec632a;
+   }
+
+.price {
+   font-size: 36px;
+   font-weight: 800;
+   padding: 10px 0;
+}
+
+.price span {
+   font-size: 16px;
+   font-weight: 400;
+   color: #595959;
+}
+
+.column ul {
+   list-style: none;
+}
+
+.column ul li {
+   padding: 10px;
+   font-size: 18px;
+   color: #595959;
+}
+
+.column ul li span {
+   color: #000000;
+   font-weight: 600;
+}
+
+.column ul li:nth-child(even) {
+   background-color: rgba(47,59,64,0.35);
+}
+
+.column div a {
+   display: inline-block;
+   width: 90%;
+   text-decoration: none;
+   background-color: #346ba5;
+   color: #fff;
+   padding: 10px 0;
+   border-radius: 4px;
+   font-weight: 600;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+   margin: 30px 0px 20px 0px;
+}
+
+.column div a:hover {
+   background-color: #437cbf;
+}
+
+.column.featured {
+   background-color: #2f4f4f;
+   color: #fff;
+}
+
+.column.featured .price span {
+   color: #fff;
+}
+
+.column.featured ul li,
+.column.featured ul li span {
+   color: #fff !important;
+}
+
+#confidence {
+   margin-top: 40px;
+   padding: 20px;
+   background-color: #2f4f4f;
+   color: #fff;
+   text-align: left;
+   width: 910px;
+}
+
+#confidence h2 {
+   font-size: 32px;
+   font-weight: 600;
+   margin-bottom: 10px;
+}
+
+#confidence ul {
+   list-style: none;
+   padding: 0;
+}
+
+#confidence ul li {
+  background-image: url('checkmark.svg');
+   background-repeat: no-repeat;
+   background-size: 24px;
+   background-position: left center;
+   padding-left: 35px;
+   margin: 8px 0;
+   font-size: 16px;
+   font-weight: 400;
+}
+
+#confidence a {
+   font-style: italic;
+   color: #00d0ff;
+}

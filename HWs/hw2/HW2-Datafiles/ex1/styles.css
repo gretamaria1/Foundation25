@@ -1,0 +1,78 @@
+/* Add your CSS style definitions to this file */
+body {
+    margin: 0 4em;
+    background-color: #f9f9f9;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+
+article {
+    background-color: white
+}
+
+h1 {
+    font-family: "Roboto Slab", serif;
+    color: #9f2042;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0em;
+}
+
+#details {
+    font-size: 1rem;
+    color: #a9a9ba;
+    text-align: center;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.6em;
+    margin: 1em 2em;
+}
+
+blockquote {
+    font family: "Roboto Slab", serif;
+    font-size: 1.2rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ececec;
+    padding: 1em;
+    margin: 0 4em;
+}
+
+a {
+    color: #ec8295;
+    text-decoration: none;
+}
+
+#buttons a:hover {
+    color: #9f2042;
+    background-color: #a9a9ba;
+}
+
+#buttons {
+    margin: 2em 2em;
+}
+
+#buttons a {
+    border: 1px solid #ececec;
+    padding: 0.8em 1em;
+    border-radius: 6px;
+    font-size: 0.9rem;
+
+}
+
+footer {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #29293a;
+    color: white;
+    font-size: 0.9rem;
+    
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    display: block
+}

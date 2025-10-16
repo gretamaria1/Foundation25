@@ -19,3 +19,22 @@ btn1.addEventListener("click", randomColor);
 
 // Use this format to change the colors rgba(133,122,200)
 // rgba (r,g,b) 0 <= r <= 255, 0 <= g <= 255, 0 <= b <= 255
+
+function randomColor2() {
+    console.log('Second button got clicked!');
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+    const randomColor = `rgba(${r},${g},${b})`;
+    colorPanel.style.backgroundColor = randomColor;
+    colorText.innerText = randomColor;
+}
+btn2.addEventListener("click", randomColor2);
+
+function randomColor3() {
+    console.log('Third button got clicked!');
+    const randomColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+    colorPanel.style.backgroundColor = randomColor;
+    colorText.innerText = randomColor;
+}
+btn3.addEventListener("click", randomColor3);

@@ -71,6 +71,14 @@ const menuList = [
       img: "./images/item-9.jpeg",
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     },
+    {
+      id: 10,
+      title: "New Food Item",
+      category: "new",
+      price: 26.99,
+      img: "./images/item-10.jpeg",
+      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    },
   ];
   
  /* return `<div class="menu-item-col">
@@ -92,15 +100,15 @@ let sectionCenter = document.querySelector(".menu-wrap-section");
 const btnContainer = document.querySelector(".btn-container");
 
 window.addEventListener("DOMContentLoaded", function () {
-displayMenuItems();
+displayMenuItems(menuList);
     
 });
 
-const displayMenuItems = () => {
+const displayMenuItems = (menuItems) => {
   //let menuItem = menuList[2];
   //console.log(menuItem);
 
-  let displayMenu = menuList.map((menuItem) => {
+  let displayMenu = menuItems.map((menuItem) => {
 
   
  return `<div class="menu-item-col">
@@ -116,7 +124,50 @@ const displayMenuItems = () => {
 
 });
 
-console.log(displayMenu);
+//console.log(displayMenu);
 displayMenu = displayMenu.join("");
 sectionCenter.innerHTML = displayMenu;
 }
+
+const displayMenuButtons = () => {
+
+  const categories = menuList.reduce((accumulator,currentItem)=>{
+    if (accumulator.includes(currentItem.category))
+      console.log('Category already exists');
+    else
+    {
+      console.log('Category is missing');
+        accumulator.push(currentItem.category)
+    }
+      console.log('accumulator');
+    return accumulator;
+  },['all'])
+
+  console.log(categories);
+
+  const categoryBtns = categories.map((itemCategory) =>{
+    return `<button class="filter-btn" type="button" data-id=${itemCategory}  >  ${itemCategory} </button>`
+  }).join('');
+
+  btnContainer.innerHTML = categoryBtns;
+
+
+const filterBtns = document.querySelectorAll(".filter-btn");
+//console.log(filterBtns);
+filterBtns.forEach((btn)=> {
+  btn.addEventListener("click", (e)=>{
+    //console.log(e.currentTarget.dataset.id);
+    const category = e.currentTarget.dataset.id;
+
+    const menuSubList = menuList.filter((menuItem) => menuItem.category === category)
+    //console.log(menuSubList);
+
+    if(category === "all")
+      displayMenuItems(menuList);
+     else
+    displayMenuItems(menuSubList);
+  })
+  })
+}
+
+displayMenuButtons();

@@ -1,15 +1,16 @@
 //1- Link to get a random meal
-//https://www.themealdb.com/api/json/v1/1/random.php
+let randomMealURL = 'https://www.themealdb.com/api/json/v1/1/random.php'
 
 //2- Link to lookup a specific meal with an id
-//https://www.themealdb.com/api/json/v1/1/lookup.php?i=
+let mealURL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i='
 
 //3- Link to search for meals using a keyword
-//https://www.themealdb.com/api/json/v1/1/search.php?s=
+let searchURL = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 
 const mealsElement = document.getElementById('meals');
 const favorites = document.querySelector('.favorites');
-getRandomMeal();
+const searchTerm = document.getElementById('search-term');
+const searchBtn = document.querySelector('#search');
 
 async function getRandomMeal() 
 {
@@ -21,17 +22,16 @@ async function getRandomMeal()
     console.log(randomMeal);
 
     mealsElement.innerHTML = '';
-    addMeal(randomMeal);
+    addMeal(randomMeal, true);
 
 }
 
-function addMeal(mealData)
-{
+const addMeal = (mealData, random = false) => {
     const meal = document.createElement('div');
     meal.classList.add('meal');
 
     meal.innerHTML =    `<div class="meal-header">
-                            <span class="random">Meal of the Day</span>
+                            ${random?'<span class="random">Meal of the Day</span>':""}
                             <img src="${mealData.strMealThumb}" alt="${mealData.strMeal}">
                         </div>
                         <div class="meal-body">
@@ -58,8 +58,12 @@ function addMeal(mealData)
 
     mealsElement.appendChild(meal);
 
-    updateFavoriteMeals();
+    const mealHeader = meal.querySelector ('.meal-header');
+    mealHeader.addEventListener('click', () => {
+        console.log('clicked');
+})
 }
+
 
 function addMealToLocalStorage(mealId)
 {
@@ -121,5 +125,51 @@ const addMealToFavorites = (meal) => {
         updateFavoriteMeals();
     })
     favorites.appendChild(favoriteMeal);
+
+    const favImg = favoriteMeal.querySelector ('#fav-img');
+    favImg.addEventListener('click', () => {
+        console.log('clicked');
+    })
 }
 
+getRandomMeal();
+updateFavoriteMeals();
+
+searchBtn.addEventListener('click', () => {
+    const searchWord = searchTerm.value;
+    console.log(searchWord);
+
+    searchForMeal(searchWord);
+});
+
+searchTerm.addEventListener('input', () => {
+    const searchWord = searchTerm.value;
+    console.log(searchWord);
+
+    searchForMeal(searchWord);
+});
+
+
+//Displaying the searched meals
+const searchForMeal = async (word) => {
+    const searchResults = await getMealsBySearch(word);
+    console.log(searchResults);
+
+    mealsElement.innerHTML = '';
+    if(searchResults)
+        searchResults.forEach((meal) =>addMeal(meal));
+}
+
+//Searching the meals
+const getMealsBySearch = async (word) => {
+    const resp = await fetch(searchURL + word);
+    const mealData = await resp.json();
+    const output = mealData.meals;
+    //console.log(output);
+
+    return output;
+}
+
+const OpenMealDetailsPage = () => {
+window.open('details.html');
+}

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spinvite</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,13 +17,13 @@
             </div>
             <nav class="nav-links">
                 <ul>
-                    <li><a href="#">Võimalused</a></li>
-                    <li><a href="#">Hinnad</a></li>
+                    <li class="nav-dropdown"><a href="#">Võimalused</a></li>
+                    <li><a href="pricing.html">Hinnad</a></li>
                 </ul>
             </nav>
             <div class="auth-buttons">
-                <a href="#" class="btn-outline">Logi sisse</a>
-                <a href="#" class="btn-primary">Registreeru</a>
+                <a href="login.html" class="btn-outline">Logi sisse</a>
+                <a href="signup.html" class="btn-primary">Registreeru</a>
             </div>
         </div>
     </header>
@@ -39,7 +40,7 @@
                     <a href="#" class="btn-outline">Broneeri demo</a>
                 </div>
             </div>
-            <div class="hero image">
+            <div class="hero-image">
                 <img src="images/Illustrations/hero image.png" alt="Hero Image" />
             </div>
         </div>
@@ -58,8 +59,201 @@
     <section class="features">
         <div class="container">
             <h2>Automatiseeri ürituste haldamine</h2>
-            <p>Saada kutsed e-postiga ja kogu vastused mugavalt ühe lingi kaudu.</p>
+            <p>Spinvite aitab sul kiiresti luua kutseid, koguda registreerumisi ja hallata osalejaid enne ning pärast üritust.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="images/Illustrations/RSVP.png" alt="RSVP" />
+                    <h3>Kutsete saatmine koos RSVP vormidega</h3>
+                    <p>Saada kutsed e-postiga ja kogu vastused mugavalt ühe lingi kaudu.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/Illustrations/Registreerimisvormide loomine.png" alt="Registreerimisvormid" />
+                    <h3>Registreerimisvormide loomine</h3>
+                    <p>Kogu vajalikud andmed osalejate kohta vabalt seadistatavate vormide teel.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/Illustrations/Automaatne kirjavahetus.png" alt="Automaatne kirjavahetus" />
+                    <h3>Automaatne kirjavahetus</h3>
+                    <p>Saada meeldetuletused, infokirjad ja järelteavitused – seadista need korra ja Spinvite hoolitseb saatmise eest õigel hetkel automaatselt.</p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <section class="workflow" id="workflow">
+        <div class="container">
+            <header class="section-header">
+                <h2>Korralda oma üritus kiiresti ja lihtsalt</h2>
+                <p>
+                    Disaini ja saada välja kutsed, jälgi reaalajas osalejate osavõttu, saada automaatseid teavitusi - Spinvite annab sulle täieliku kontrolli igas etapis.  
+                </p>
+            </header>
+
+            <div class="workflow-tabs" role="tablist" aria-label="Ürituste etapid">
+                <button class="workflow-tab is-active" role="tab" aria-selected="true">
+                    Enne üritust
+                </button>
+                <button class="workflow-tab" role="tab" aria-selected="false">
+                    Ürituse ajal
+                </button>
+                <button class="workflow-tab" role="tab" aria-selected="false">
+                    Pärast üritust
+                </button>
+            </div>
+
+            <div class="workflow-grid">
+                <article class="workflow-card">
+                    <h3>Mallid</h3>
+                    <p>
+                      Vali eelkujundatud kutsemall või loo täiesti oma disain - lisa logo, värvid ja tekstid just nii, nagu soovid.  
+                    </p>
+                </article>
+
+                <article class="workflow-card">
+                    <h3>Vabaregistreerimine</h3>
+                    <p>
+                      Saada registreerimisvorm, kuhu osalejad saavad end kirja panna paari klikiga.  
+                    </p>
+                </article>
+
+                <article class="workflow-card">
+                    <h3>PDF-kutsete loomine</h3>
+                    <p>
+                      Loo kutsed PDF-formaadis, mida saab lisada e-kirjale või välja printida.  
+                    </p>
+                </article>
+
+                <article class="workflow-card">
+                    <h3>Andmeväljade seadistamine</h3>
+                    <p>
+                      Määratle ise, milliseid andmeid kogud. Lisa, muuda ja korralda vormivälju täpselt oma sündmuse järgi.  
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients" id="clients">
+        <div class="container">
+            <header class="section-header section-header--center">
+                <h2>Meie kliendid</h2>
+            </header>
+
+            <div class="testimonial">
+                <p>
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.”  
+                </p>
+            </div>
+
+            <div class="client-list">
+                <article class="client-item">
+                    <div class="client-meta">
+                        <h3>Kaitseliit</h3>
+                        <p>Mari Maasikas</p>
+                    </div>
+                </article>
+
+                <article class="client-item">
+                    <div class="client-meta">
+                        <h3>Presidendi Kantselei</h3>
+                        <p>Mari Maasikas</p>
+                    </div>
+                </article>
+
+                <article class="client-item">
+                    <div class="client-meta">
+                        <h3>Välisministeerium</h3>
+                        <p>Mari Maasikas</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container contact-inner">
+            <div class="contact-copy">
+                <header class="section-header">
+                    <h2>Võta meiega ühendust!</h2>
+                    <p>
+                        Meil on hea meel, et kaalute Spinvite’i enda ürituste korraldamise abiliseks!
+                        Jätke oma kontakt ning võtame teiega ühendust 2 tööpäeva jooksul.
+                    </p>
+                </header>
+
+                <div class="contact-illustration">
+                    <img src="images/Illustrations/Contact us.png" alt="Contact us" />
+                </div>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <label for="name">Nimi</label>
+                        <input type="text" id="name" name="name" required />
+                        <label for="email">E-post</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="phone">Telefoninumber</label>
+                        <input type="tel" id="phone" name="phone" />
+                        <label for="company">Ettevõte</label>
+                        <input type="text" id="company" name="company" />
+                    </div>
+
+                    <div class="form-full">
+                        <label for="message">Sõnum</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Sisesta oma sõnum siia..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Saada sõnum</button>
+
+                    <div class="contact-social">
+                        <a href="#"><img src="images/Icons/Facebook.svg" alt="" /></a>
+                        <a href="#"><img src="images/Icons/LinkedIn.svg" alt="" /></a>
+                        <a href="#"><img src="images/Icons/Instagram.svg" alt="" /></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    <div class="container footer-content">
+      <div class="footer-logo">Spinvite</div>
+      <div class="footer-links">
+        <div>
+          <h4>Funktsioonid</h4>
+          <ul>
+            <li><a href="#">RSVP vormid</a></li>
+            <li><a href="#">Kutsete kontroll</a></li>
+            <li><a href="#">Mallid</a></li>
+            <li><a href="#">Statistika</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Abi</h4>
+          <ul>
+            <li><a href="#">KKK</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Hinnad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Rakendus</h4>
+          <ul>
+            <li><a href="#">iOS</a></li>
+            <li><a href="#">Android</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">© 2025 Spin TEK AS | <a href="#">Kasutustingimused</a> | <a href="#">Privaatsuspoliitika</a></p>
+    </div>
+  </footer>
 </body>
 </html>

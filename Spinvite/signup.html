@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registreeru – Spinvite</title>
+
+  <!-- DM Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Shared + auth styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body class="auth-body">
+
+  <!-- TOP BAR WITH LOGO -->
+  <header class="auth-header">
+    <div class="container auth-header-inner">
+      <a href="index.html" class="auth-logo">
+        <img src="images/Logos/Spinvite.svg" alt="Spinvite logo">
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN AREA -->
+  <main class="auth-main">
+    <div class="auth-hero">
+      <div class="auth-card">
+
+        <!-- TABS -->
+        <div class="auth-tabs">
+          <!-- Logi sisse tab goes to login page -->
+          <a class="auth-tab" href="login.html">
+            Logi sisse
+          </a>
+          <!-- Registreeru is active on this page -->
+          <button class="auth-tab is-active" type="button">
+            Registreeru
+          </button>
+        </div>
+
+        <!-- SIGNUP FORM -->
+        <form class="auth-form">
+          <!-- NAME ROW (Eesnimi / Perekonnanimi) -->
+          <div class="auth-field auth-field--row">
+            <div class="auth-field">
+              <label for="firstname">Eesnimi</label>
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                placeholder="Eesnimi"
+                required
+              />
+            </div>
+
+            <div class="auth-field">
+              <label for="lastname">Perekonnanimi</label>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="Perekonnanimi"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="auth-field">
+            <label for="email">E-posti aadress</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Sisesta oma e-posti aadress"
+              required
+            />
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="auth-field">
+            <label for="password">Salasõna</label>
+            <div class="auth-password-wrapper">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Sisesta oma salasõna"
+                required
+              />
+              <button class="password-toggle" type="button" aria-label="Näita salasõna">
+                <img src="images/Icons/eye.svg" alt="Eye icon" />
+              </button>
+            </div>
+          </div>
+
+          <!-- TERMS CHECKBOX -->
+          <div class="auth-row">
+            <label class="remember-me">
+              <input type="checkbox" name="terms" required />
+              <span>Nõustun <a href="#" class="terms-link">kasutustingimustega</a></span>
+            </label>
+          </div>
+
+          <!-- MAIN SUBMIT BUTTON -->
+          <button type="submit" class="btn-primary auth-submit">
+            Registreeru
+          </button>
+
+          <!-- SEPARATOR TEXT -->
+          <p class="auth-separator">või registreeru</p>
+
+          <!-- ALT LOGIN METHODS -->
+          <div class="auth-alt-login">
+            <a href="#">Smart-ID</a>
+            <a href="#">ID-kaart</a>
+            <a href="#">Mobiil-ID</a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

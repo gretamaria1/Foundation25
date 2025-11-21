@@ -1,207 +1,3 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'DM Sans', sans-serif;
-  color: #114B5F; 
-  background-color: #ffffff;
-  line-height: 1.5;
-}
-
-/* Links */
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-h1 {
-  font-weight: 700;
-  line-height: 1.15;
-}
-
-h2 {
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-h3 {
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-h4 {
-  font-weight: 600;
-}
-
-p {
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-/* ===== DESIGN TOKENS ===== */
-
-:root {
-  --color-primary: #089993;
-  --color-primary-dark: #0ba0a1;
-  --color-dark: #114B5F;
-  --color-muted: #6a7a86;
-  --color-border-light: #e5f3f5;
-  --color-bg-light: #f6fbfb;
-  --radius-pill: 999px;
-  --radius-card: 20px;
-  --shadow-soft: 0 4px 8px -2px rgba(23, 23, 23, 0.10);
-}
-
-/* ===== LAYOUT ===== */
-
-.container {
-  width: min(1120px, 100% - 3rem);
-  margin-inline: auto;
-}
-
-/* Headings */
-
-h1, h2, h3, h4 {
-  margin: 0;
-  color: var(--color-dark);
-}
-
-p {
-  margin: 0;
-  color: var(--color-muted);
-}
-
-/* ===== BUTTONS ===== */
-
-.btn-primary,
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.8rem;
-  border-radius: var(--radius-pill);
-  font-size: 0.95rem;
-  font-weight: 600;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-  white-space: nowrap;
-}
-
-.btn-primary {
-  background-color: var(--color-primary);
-  color: #ffffff;
-  box-shadow: var(--shadow-soft);
-}
-
-.btn-primary:hover {
-  background-color: var(--color-primary-dark);
-  transform: translateY(-1px);
-}
-
-.btn-outline {
-  background-color: #ffffff;
-  color: var(--color-dark);
-  border-color: var(--color-border-light);
-}
-
-.btn-outline:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary-dark);
-  transform: translateY(-1px);
-}
-
-/* ===== NAVBAR ===== */
-
-.navbar {
-  position: sticky; /* stays at top when scrolling */
-  top: 0;
-  z-index: 100;
-  background-color: #ffffff;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 2.5rem;
-  padding-block: 1.25rem; /* top & bottom */
-}
-
-/* Logo */
-.logo img {
-  height: 50px;
-  display: block;
-}
-
-/* Nav links */
-.nav-links {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-.nav-links ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--color-muted);
-}
-
-.nav-links li.nav-dropdown a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-.nav-links li.nav-dropdown a::after {
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid var(--color-muted);
-  transition: border-top-color 0.15s ease;
-}
-
-.nav-links li.nav-dropdown a:hover::after {
-  border-top-color: var(--color-dark);
-}
-
-.nav-links a:hover {
-  color: var(--color-dark);
-}
-
-/* Auth buttons (Logi sisse / Registreeru) */
-.auth-buttons {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-left: 1.5rem;
-}
-
 /* ===== HERO ===== */
 
 .hero {
@@ -252,50 +48,6 @@ p {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-/* ===== LOGO BAR ===== */
-
-.logo-bar {
-  padding: 2.5rem 0;
-  background-color: #F0F7F7;
-}
-
-.logo-bar-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    flex-wrap: wrap;
-}
-
-.logo-bar-content img {
-  max-height: 55px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
-
-.logo-bar-content img {
-  filter: grayscale(100%);
-  opacity: 0.7;
-}
-
-.logo-bar-content img:hover {
-    filter: none;
-    opacity: 1;
-}
-
-.logo-bar-content img.logo--kaitseliit {
-  max-height: 45px;
-}
-
-.logo-bar-content img.logo--riigikantselei {
-  max-height: 70px;
-}
-
-.logo-bar-content img.logo--valismin {
-  max-height: 70px;
 }
 
 /* ===== FEATURES SECTION ===== */
@@ -374,6 +126,11 @@ p {
   margin-bottom: 2.5rem;
 }
 
+.workflow .section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
 .workflow .section-header p {
   max-width: 42rem;
   margin: 0 auto;
@@ -433,8 +190,8 @@ p {
 
 .workflow-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.75rem 1.75rem; /* row-gap col-gap */
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem 1.5rem;
 }
 
 /* ----- CARD BASE ----- */
@@ -449,16 +206,22 @@ p {
 
 /* ----- LARGE TOP-LEFT CARD ----- */
 .card-large {
-  grid-column: span 2; /* makes it full-width in the first row */
   display: flex;
   justify-content: space-between;
-  padding: 2.2rem 2.4rem;
+  grid-column: span 2;
+  flex-direction: row;
 }
 
 /* illustration inside the large card */
 .card-large .card-illustration {
   width: 160px;
   height: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.card-large .card-text {
+  max-width: 65%; /* or whatever fits your Figma */
 }
 
 /* ----- COLOR THEMES ----- */
@@ -478,12 +241,33 @@ p {
   background: #f8f0df;
 }
 
+/* 1st card: big top-left */
+.workflow-card:nth-child(1) {
+  grid-column: 1 / span 4;  /* columns 1–4 */
+}
+
+/* 2nd card: top-right */
+.workflow-card:nth-child(2) {
+  grid-column: 5 / span 2;  /* columns 5–6 */
+}
+
+/* 3rd card: bottom-left */
+.workflow-card:nth-child(3) {
+  grid-column: 1 / span 3;  /* columns 1–3 */
+}
+
+/* 4th card: bottom-right */
+.workflow-card:nth-child(4) {
+  grid-column: 4 / span 3;  /* columns 4–6 */
+}
+
 /* ----- TEXT STYLING (matches Figma typography) ----- */
 .workflow-card h3 {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #1a2e35;
+  font-weight: 800;
 }
 
 .workflow-card p {
@@ -492,7 +276,100 @@ p {
   color: #1a2e35;
 }
 
-/* ----- RESPONSIVE ----- */
+/* ===== CLIENTS / "MEIE KLIENDID" ===== */
+
+.clients {
+  padding: 5rem 0 4.5rem;
+}
+
+/* center the heading */
+.section-header--center {
+  text-align: center;
+}
+
+.clients .section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* testimonial text */
+.clients .testimonial p {
+  max-width: 46rem;
+  margin: 1.75rem auto 3rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* client row with the horizontal line */
+.client-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #e5f3f5;
+  position: relative;
+}
+
+/* colored bar in the middle of the line */
+.client-list::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1px;                    /* sits on top of the border */
+  width: 300px;                 /* length of the teal accent */
+  border-top: 3px solid var(--color-primary);
+}
+
+/* individual client items */
+.client-item {
+  flex: 1;
+  text-align: center;
+}
+
+/* center item slightly more centred visually */
+.client-item:nth-child(2) {
+  text-align: center;
+}
+
+.client-item:last-child {
+  text-align: center;
+}
+
+/* org name */
+.client-item h3 {
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+/* person name */
+.client-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* responsive: clients */
+@media (max-width: 768px) {
+  .client-list {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .client-list::before {
+    width: 80px;
+  }
+
+  .client-item,
+  .client-item:nth-child(2) {
+    text-align: left;
+  }
+}
+
+/* ----- RESPONSIVE workflow grid----- */
 @media (max-width: 860px) {
   .workflow-grid {
     grid-template-columns: 1fr;
@@ -570,24 +447,5 @@ p {
 
   .hero-buttons {
     justify-content: center;
-  }
-}
-
-
-/* ===== RESPONSIVE NAVBAR ===== */
-
-@media (max-width: 768px) {
-  .nav-container {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 1rem;
-  }
-
-  .nav-links ul {
-    gap: 1rem;
-  }
-
-  .auth-buttons {
-    margin-left: auto;
   }
 }

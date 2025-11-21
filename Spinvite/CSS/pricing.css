@@ -1,0 +1,238 @@
+/* --- Hero & headline --- */
+
+.pricing-hero {
+  padding: 5rem 0 4.5rem;
+  background-color: #ffffff;
+}
+
+.pricing-hero .section-header--center {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.pricing-hero .section-header--center h2 {
+  font-size: 2rem;
+  align-items: center;
+}
+
+.pricing-hero .section-header--center p {
+  max-width: 32rem;
+  margin: 0.75rem auto 0;
+}
+
+/* --- Pricing cards grid --- */
+
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* little extra spacing between rows */
+.pricing-grid--second-row {
+  margin-top: 2.25rem;
+}
+
+/* --- Individual pricing card --- */
+
+.pricing-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* top header area of card */
+.pricing-card__header {
+  background-color: #F0F7F7;
+  padding: 1.4rem 1.5rem;
+  text-align: center;
+}
+
+.pricing-card__header h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* price area */
+.pricing-card__price {
+  text-align: center;
+  padding: 1.7rem 1.5rem 0.75rem;
+}
+
+.pricing-card__price--contact p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--color-dark);
+}
+
+/* big price number */
+.pricing-amount {
+  display: inline-block;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.pricing-period {
+  margin-left: 0.15rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* CTA button */
+.pricing-card__cta {
+  padding: 0 1.5rem 1.25rem;
+}
+
+.pricing-card__cta .btn-primary,
+.pricing-card__cta .btn-outline {
+  width: 100%;
+  justify-content: center;
+}
+
+/* feature list */
+.pricing-card__features {
+  list-style: none;
+  margin: 0;
+  padding: 1.25rem 1.7rem 1.5rem;
+  border-top: 1px solid #e5f3f5;
+}
+
+.pricing-card__features li {
+  font-size: 1rem;
+  color: var(--color-dark);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin-bottom: 0.45rem;
+}
+
+/* checkmark bullet */
+.pricing-card__features li::before {
+  content: "✓";
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 0.05rem;
+}
+
+/* remove extra margin from last li */
+.pricing-card__features li:last-child {
+  margin-bottom: 0;
+}
+
+/* ===========================
+   FAQ / KKK
+   =========================== */
+
+.faq {
+  padding: 5rem 0 4.5rem;
+}
+
+.faq .section-header--center {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.faq .section-header--center h2 {
+  font-size: 2rem;
+}
+
+.faq .section-header--center p {
+  max-width: 40rem;
+  margin: 0.75rem auto 0;
+}
+
+.faq-list {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* base FAQ item */
+.faq-item {
+  background-color: #f6fbfb;
+  border-radius: 18px;
+  padding: 1.1rem 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* “open” example item */
+.faq-item--open {
+  background-color: #c8e6e8;
+}
+
+/* question row */
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  cursor: default; /* JS will later make this interactive */
+}
+
+/* icon bubble on the right */
+.faq-icon {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(17, 75, 95, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--color-dark);
+}
+
+/* open item icon style */
+.faq-item--open .faq-icon {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+/* answer text (shown only for "open" demo item now) */
+.faq-answer {
+  margin-top: 0.8rem;
+  font-size: 0.94rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+/* for non-open items you currently have no .faq-answer,
+   later when you add JS you can hide/show it there */
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 900px) {
+  .pricing-hero {
+    padding-top: 4rem;
+  }
+
+  .pricing-grid {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-card {
+    width: 100%;
+    max-width: 360px;
+  }
+}

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spinvite</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel ="stylesheet" href="CSS/landing.css">
 </head>
 <body>
     <header class="navbar">
@@ -110,7 +111,7 @@
                         <h3>Mallid</h3>
                         <p>Vali eelkujundatud kutsemall või loo täiesti oma disain - lisa logo, värvid ja tekstid just nii, nagu soovid.</p>
                     </div>
-                    <img src="images/Illustrations/Mallid.png" alt="Mallid" class="card-illustration"/>
+                    <img src="images/Illustrations/Mallid.svg" alt="Mallid" class="card-illustration"/>
                 </article>
 
                 <article class="workflow-card card-medium card-teal">
@@ -178,85 +179,115 @@
     </section>
 
     <section class="contact" id="contact">
-        <div class="container contact-inner">
-            <div class="contact-copy">
-                <header class="section-header">
+        <div class="container">
+                <header class="section-header contact-header">
                     <h2>Võta meiega ühendust!</h2>
                     <p>
                         Meil on hea meel, et kaalute Spinvite’i enda ürituste korraldamise abiliseks!
                         Jätke oma kontakt ning võtame teiega ühendust 2 tööpäeva jooksul.
                     </p>
                 </header>
+            
+            <div class="contact-inner">
+                <div class="contact-copy">
+                    <div class="contact-illustration">
+                        <img src="images/Illustrations/Contact us.png" alt="Contact us" />
+                    </div>
+                </div>
+      
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name">Nimi*</label>
+                                <input type="text" id="name" name="name" required />
+                            </div>
+                            <div class="form-field">
+                                <label for="email">E-post*</label>
+                                <input type="email" id="email" name="email" required />
+                            </div>
+                     </div>
 
-                <div class="contact-illustration">
-                    <img src="images/Illustrations/Contact us.png" alt="Contact us" />
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="phone">Telefoninumber</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+372" />
+                            </div>
+                            <div class="form-field">
+                                <label for="company">Ettevõte</label>
+                                <input type="text" id="company" name="company" />
+                            </div>
+                        </div>
+
+                        <div class="form-full">
+                            <label for="message">Sõnum</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Sisesta oma sõnum siia..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Saada sõnum</button>
+                    </form>
                 </div>
             </div>
-            
-            <div class="contact-form-wrapper">
-                <form class="contact-form">
-                    <div class="form-row">
-                        <label for="name">Nimi</label>
-                        <input type="text" id="name" name="name" required />
-                        <label for="email">E-post</label>
-                        <input type="email" id="email" name="email" required />
-                    </div>
+        </div>
+    </section>  
 
-                    <div class="form-row">
-                        <label for="phone">Telefoninumber</label>
-                        <input type="tel" id="phone" name="phone" />
-                        <label for="company">Ettevõte</label>
-                        <input type="text" id="company" name="company" />
-                    </div>
+    <footer class="footer">
+        <div class="container footer-content">
 
-                    <div class="form-full">
-                        <label for="message">Sõnum</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Sisesta oma sõnum siia..."></textarea>
-                    </div>
+            <!-- LEFT SIDE: LOGO + TEXT + SOCIAL ICONS -->
+            <div class="footer-left">
+            <img src="images/Logos/Spinvite.svg" alt="Spinvite Logo" class="footer-logo-image" />
+            <p class="footer-tagline">Korralda enda üritus lihtsalt ja kiirelt!</p>
 
-                    <button type="submit" class="btn-primary">Saada sõnum</button>
+            <div class="footer-social">
+                <a href="#"><img src="images/Icons/Facebook.svg" alt="Facebook" /></a>
+                <a href="#"><img src="images/Icons/Instagram.svg" alt="Instagram" /></a>
+                <a href="#"><img src="images/Icons/LinkedIn.svg" alt="LinkedIn" /></a>
+            </div>
+            </div>
 
-                    <div class="contact-social">
-                        <a href="#"><img src="images/Icons/Facebook.svg" alt="" /></a>
-                        <a href="#"><img src="images/Icons/LinkedIn.svg" alt="" /></a>
-                        <a href="#"><img src="images/Icons/Instagram.svg" alt="" /></a>
-                    </div>
-                </form>
+            <!-- RIGHT SIDE: LINK COLUMNS -->
+            <div class="footer-links">
+
+            <div class="footer-col">
+                <h4>Funktsioonid</h4>
+                <ul>
+                <li><a href="#">RSVP vormid</a></li>
+                <li><a href="#">Vabaregistreerimine</a></li>
+                <li><a href="#">Kutsete kontroll</a></li>
+                <li><a href="#">Mallid</a></li>
+                <li><a href="#">Statistika</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Abi</h4>
+                <ul>
+                <li><a href="#">Meist</a></li>
+                <li><a href="#">KKK</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Hinnad</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Rakendus</h4>
+                <ul>
+                <li><a href="#">iOS</a></li>
+                <li><a href="#">Android</a></li>
+                </ul>
+            </div>
+
             </div>
         </div>
-    </section>
 
-    <footer>
-    <div class="container footer-content">
-      <div class="footer-logo">Spinvite</div>
-      <div class="footer-links">
-        <div>
-          <h4>Funktsioonid</h4>
-          <ul>
-            <li><a href="#">RSVP vormid</a></li>
-            <li><a href="#">Kutsete kontroll</a></li>
-            <li><a href="#">Mallid</a></li>
-            <li><a href="#">Statistika</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Abi</h4>
-          <ul>
-            <li><a href="#">KKK</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Hinnad</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Rakendus</h4>
-          <ul>
-            <li><a href="#">iOS</a></li>
-            <li><a href="#">Android</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="copyright">© 2025 Spin TEK AS | <a href="#">Kasutustingimused</a> | <a href="#">Privaatsuspoliitika</a></p>
-    </div>
-  </footer>
+        <hr class="footer-divider" />
+
+        <p class="footer-bottom">
+            © 2025 Spin TEK AS | 
+            <a href="#">Kasutustingimused</a> |
+            <a href="#">Privaatsuspoliitika</a>
+        </p>
+    </footer>
 </body>
 </html>

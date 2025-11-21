@@ -169,7 +169,7 @@ const getMealsBySearch = async (word) => {
 
     return output;
 }
-
+  
 const OpenMealDetailsPage = () => {
 window.open('details.html');
 }

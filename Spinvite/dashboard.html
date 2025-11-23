@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Üritused – Spinvite</title>
+
+  <!-- DM Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Shared + page-specific styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+  <!-- APP HEADER -->
+  <header class="app-header">
+  <div class="container app-header-inner">
+
+    <!-- Left: Logo -->
+    <a href="dashboard.html" class="app-logo-header">
+      <img src="images/Logos/Spinvite.svg" alt="Spinvite logo" />
+    </a>
+
+    <!-- Right side: toggle + user -->
+    <div class="app-header-right">
+
+      <!-- HAMBURGER (tablet/mobile only) -->
+      <button class="app-menu-toggle" type="button" aria-label="Ava menüü">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- USER -->
+      <div class="app-user">
+        <span class="app-user-name">Mari Maasikas</span>
+        <span class="app-user-avatar">M</span>
+        <span class="app-user-chevron">▾</span>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+
+  <!-- SHELL: SIDEBAR + MAIN -->
+  <div class="app-shell">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <nav class="sidebar-nav">
+        <ul class="sidebar-section">
+          <li class="sidebar-item is-active">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/uritused.svg" alt="Üritused" />
+              </span>
+              <span>Üritused</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+                <span class="sidebar-icon">
+                    <img src="images/Icons/Osalejad.svg" alt="Osalejad" />
+                </span>
+              <span>Osalejad</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Kurtsed.svg" alt="Kutsed" />
+              </span>
+              <span>Kutsed</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Vormid.svg" alt="Vormid" />
+              </span>
+              <span>Vormid</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Statistika.svg" alt="Statistika" />
+              </span>
+              <span>Statistika</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Meedia.svg" alt="Meedia" />
+                </span>
+              <span>Meedia</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Haldus</div>
+
+        <ul class="sidebar-section">
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Tiim.svg" alt="Tiim" />
+              </span>
+              <span>Tiim</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Keeled.svg" alt="Keeled" />
+              </span>
+              <span>Keeled</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Seaded.svg" alt="Seaded" />
+              </span>
+              <span>Seaded</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Arveldus.svg" alt="Arveldus" />
+              </span>
+              <span>Arveldus</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Juhendid.svg" alt="Juhendid" />
+              </span>
+              <span>Juhendid</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <main class="dashboard-main">
+      <!-- top bar: button + search -->
+      <div class="dashboard-top">
+        <a href="#" class="btn-primary dashboard-new-event">
+          Loo uus üritus
+          <span class="dashboard-new-icon">+</span>
+        </a>
+
+        <form class="dashboard-search">
+          <input
+            type="text"
+            placeholder="Otsi üritust"
+            aria-label="Otsi üritust"
+          />
+        </form>
+      </div>
+
+      <!-- tabs row -->
+      <div class="dashboard-tabs-row">
+        <div class="dashboard-tabs">
+          <button class="dashboard-tab is-active" type="button">
+            Tulevad üritused
+          </button>
+          <button class="dashboard-tab" type="button">
+            Möödunud üritused
+          </button>
+        </div>
+
+        <a href="#" class="dashboard-calendar-link">
+          Kalender
+          <span class="calendar-icon">
+            <img src="images/Icons/Kalender.svg" alt="Kalender" />
+          </span>
+        </a>
+      </div>
+
+      <!-- event cards grid -->
+      <section class="event-grid">
+        <!-- card 1 -->
+        <article class="event-card">
+          <div class="event-card-header">
+            <img
+              src="images/christmas.jpg"
+              alt="Jõulupidu"
+              class="event-image"
+            />
+            <div class="event-status-pill">Avaldatud</div>
+            <button class="event-menu" type="button" aria-label="Rohkem valikuid">
+              •••
+            </button>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-title">Jõulupidu</h3>
+            <p class="event-date">12.12.2025</p>
+
+            <div class="event-card-footer">
+              <div class="event-chart"></div>
+              <ul class="event-legend">
+                <li><span class="dot dot--teal"></span> Osaleb 65</li>
+                <li><span class="dot dot--light"></span> Pole vastanud 25</li>
+                <li><span class="dot dot--lighter"></span> Ei osale 10</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- card 2 (same content, can change later) -->
+        <article class="event-card">
+          <div class="event-card-header">
+            <img
+              src="images/christmas.jpg"
+              alt="Jõulupidu"
+              class="event-image"
+            />
+            <div class="event-status-pill">Avaldatud</div>
+            <button class="event-menu" type="button" aria-label="Rohkem valikuid">
+              •••
+            </button>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-title">Jõulupidu</h3>
+            <p class="event-date">12.12.2025</p>
+
+            <div class="event-card-footer">
+              <div class="event-chart"></div>
+              <ul class="event-legend">
+                <li><span class="dot dot--teal"></span> Osaleb 65</li>
+                <li><span class="dot dot--light"></span> Pole vastanud 25</li>
+                <li><span class="dot dot--lighter"></span> Ei osale 10</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- card 3 -->
+        <article class="event-card">
+          <div class="event-card-header">
+            <img
+              src="images/christmas.jpg"
+              alt="Jõulupidu"
+              class="event-image"
+            />
+            <div class="event-status-pill">Avaldatud</div>
+            <button class="event-menu" type="button" aria-label="Rohkem valikuid">
+              •••
+            </button>
+          </div>
+          <div class="event-card-body">
+            <h3 class="event-title">Jõulupidu</h3>
+            <p class="event-date">12.12.2025</p>
+
+            <div class="event-card-footer">
+              <div class="event-chart"></div>
+              <ul class="event-legend">
+                <li><span class="dot dot--teal"></span> Osaleb 65</li>
+                <li><span class="dot dot--light"></span> Pole vastanud 25</li>
+                <li><span class="dot dot--lighter"></span> Ei osale 10</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

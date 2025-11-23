@@ -1,0 +1,124 @@
+body {
+  background-color: #e9f5f5;
+}
+
+/* header (you can move this to base.css later, same as payment page) */
+.app-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.app-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.8rem;
+}
+
+.app-logo img {
+  height: 38px;
+}
+
+.app-user {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--color-dark);
+}
+
+.app-user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #c8e6e8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.app-user-chevron {
+  font-size: 0.7rem;
+}
+
+/* main welcome block */
+
+.welcome-main {
+  min-height: calc(100vh - 70px - 70px); /* header + footer approx */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.welcome-content {
+  text-align: center;
+}
+
+/* big title */
+.welcome-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* subtitle */
+.welcome-subtitle {
+  font-size: 1rem;
+  color: var(--color-muted);
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+}
+
+/* CTA button */
+.welcome-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  padding-inline: 2.5rem;
+}
+
+.welcome-cta-icon {
+  font-size: 1.2rem;
+}
+
+/* footer */
+
+.app-footer {
+  padding: 1.5rem 0 2rem;
+  background-color: #e9f5f5;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.app-footer-inner {
+  text-align: center;
+}
+
+.app-footer-inner a {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+.app-footer-inner a:hover {
+  text-decoration: underline;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 2.3rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .welcome-main {
+    min-height: calc(100vh - 60px - 70px);
+    padding-top: 2.5rem;
+  }
+}

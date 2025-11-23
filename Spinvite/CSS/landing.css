@@ -221,7 +221,8 @@
 }
 
 .card-large .card-text {
-  max-width: 65%; /* or whatever fits your Figma */
+  max-width: 70%;
+  
 }
 
 /* ----- COLOR THEMES ----- */
@@ -369,20 +370,35 @@
   }
 }
 
-/* ----- RESPONSIVE workflow grid----- */
+/* ===== WORKFLOW – RESPONSIVE ===== */
 @media (max-width: 860px) {
-  .workflow-grid {
-    grid-template-columns: 1fr;
+
+  /* let the inner content stretch full width, not “centered column” */
+  .workflow .container {
+    align-items: stretch;
   }
 
+  /* grid becomes a simple single-column stack */
+  .workflow-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  /* remove custom column placements */
+  .workflow-card {
+    grid-column: auto !important;
+    width: 100%;
+  }
+
+  /* large card becomes normal card stacked like others */
   .card-large {
-    grid-column: span 1;
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    text-align: left;      /* or center if you prefer */
   }
 
   .card-large .card-illustration {
-    margin-top: 1rem;
+    width: 110px;
   }
 }
 
@@ -433,7 +449,7 @@
   }
 
   .hero-image {
-    order: 0;
+    order: 2;
     justify-content: center;
   }
 

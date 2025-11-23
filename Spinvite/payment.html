@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Makse – Spinvite</title>
+
+  <!-- DM Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Shared + page-specific styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/payment.css" />
+</head>
+<body>
+
+  <!-- APP HEADER (logo + user) -->
+  <header class="app-header">
+    <div class="container app-header-inner">
+      <a href="index.html" class="app-logo">
+        <img src="images/Logos/Spinvite.svg" alt="Spinvite logo" />
+      </a>
+
+      <div class="app-user">
+        <span class="app-user-name">Mari Maasikas</span>
+        <span class="app-user-avatar">M</span>
+        <span class="app-user-chevron">▾</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="payment-main">
+    <div class="container payment-layout">
+
+      <!-- LEFT: CARD FORM -->
+      <section class="payment-form-column">
+        <h1 class="payment-title">Maksevahend</h1>
+
+        <label class="payment-toggle">
+          <span class="toggle-label">Maksa arvega</span>
+          <span class="toggle-switch">
+            <span class="toggle-thumb"></span>
+          </span>
+        </label>
+
+        <form class="payment-form">
+
+          <!-- Nimi kaardil -->
+          <div class="payment-field">
+            <label for="card-name">Nimi kaardil</label>
+            <input type="text" id="card-name" name="card_name" placeholder="Mari Maasikas" />
+          </div>
+
+          <!-- Kaardi number -->
+          <div class="payment-field payment-field--card-number">
+            <label for="card-number">Kaardi number</label>
+            <div class="payment-input-with-icon">
+              <input
+                type="text"
+                id="card-number"
+                name="card_number"
+                placeholder="1234 5678 9012 3456"
+              />
+              <img src="images/Icons/creditcard.svg" alt="Mastercard" class="card-brand" />
+            </div>
+          </div>
+
+          <!-- aegub + turvakood -->
+          <div class="payment-row">
+            <div class="payment-field">
+              <label for="card-expiry">Aegub</label>
+              <input type="text" id="card-expiry" name="card_expiry" placeholder="kk/aa" />
+            </div>
+
+            <div class="payment-field">
+              <label for="card-cvc">Turvakood</label>
+              <input type="password" id="card-cvc" name="card_cvc" placeholder="•••" />
+            </div>
+          </div>
+
+          <!-- arveldusaadress -->
+          <div class="payment-field">
+            <label for="billing-address">Arvelduse aadress</label>
+            <input type="text" id="billing-address" name="billing_address" />
+          </div>
+
+          <!-- ettevõtte pangakaart -->
+          <label class="payment-checkbox">
+            <input type="checkbox" name="business_card" checked />
+            <span>Ettevõtte pangakaart</span>
+          </label>
+
+          <!-- raamatupidamise e-post -->
+          <div class="payment-field">
+            <label for="accounting-email">Raamatupidamise e-posti aadress</label>
+            <input type="email" id="accounting-email" name="accounting_email" />
+          </div>
+
+          <!-- submit -->
+          <button type="submit" class="btn-primary payment-submit">
+            Liitu paketiga
+          </button>
+        </form>
+      </section>
+
+      <!-- RIGHT: SUMMARY -->
+      <section class="payment-summary-column">
+
+        <!-- Big teal card -->
+        <div class="summary-plan-card">
+          <p class="summary-plan-name">Spinvite Standard</p>
+          <p class="summary-price">
+            <span class="summary-price-amount">99.99€</span>
+            <span class="summary-price-period">/kuus</span>
+          </p>
+          <p class="summary-plan-description">
+            3 kasutajat, piiramatu arv üritusi, kuni 1000 osalejat ürituse kohta,
+            kuni 10000 e-kirja kuus
+          </p>
+        </div>
+
+        <!-- White breakdown card -->
+        <div class="summary-breakdown-card">
+          <div class="summary-row summary-row--top">
+            <div>
+              <p class="summary-line-title">Spinvite Standard</p>
+              <p class="summary-line-subtitle">Iga kuu</p>
+            </div>
+            <p class="summary-line-amount">99.99€</p>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-row">
+            <p class="summary-line-title">Summa</p>
+            <p class="summary-line-amount">80.64€</p>
+          </div>
+
+          <div class="summary-row">
+            <p class="summary-line-title">Sisaldab käibemaksu (24%)</p>
+            <p class="summary-line-amount">19.35€</p>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-row summary-row--total">
+            <p class="summary-line-title">Kokku</p>
+            <p class="summary-line-amount">99.99€</p>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container app-footer-inner">
+      <p>© 2025 Spin TEK AS |
+        <a href="#">Kasutajatingimused</a> |
+        <a href="#">Privaatsuspoliitika</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

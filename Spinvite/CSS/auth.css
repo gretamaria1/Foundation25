@@ -1,10 +1,8 @@
-/* ===== AUTH LAYOUT (login / signup) ===== */
-
 .auth-body {
   background-color: #ffffff;
 }
 
-/* top strip with logo */
+/* header */
 .auth-header {
   background-color: #ffffff;
   border-bottom: 1px solid var(--color-border-light);
@@ -16,9 +14,9 @@
   padding-block: 1rem;
 }
 
-/* main background image area */
+/* background */
 .auth-main {
-  min-height: calc(100vh - 70px); /* ~ header height */
+  min-height: calc(100vh - 70px);
   background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0) 0%,
@@ -32,7 +30,6 @@
   align-items: stretch;
 }
 
-/* container for card */
 .auth-hero {
   width: min(1120px, 100% - 3rem);
   margin: 0 auto;
@@ -41,7 +38,7 @@
   justify-content: flex-start;
 }
 
-/* ===== LOGIN CARD ===== */
+/* LOGIN CARD */
 
 .auth-card {
   width: 420px;
@@ -51,7 +48,6 @@
   box-shadow: var(--shadow-soft);
 }
 
-/* tabs row at top of card */
 .auth-tabs {
   display: flex;
   background-color: #f3f9f9;
@@ -60,7 +56,6 @@
   margin-bottom: 2rem;
 }
 
-/* both tab “buttons” (button + anchor) share styles */
 .auth-tab {
   flex: 1;
   display: inline-flex;
@@ -77,18 +72,16 @@
   text-decoration: none;
 }
 
-/* active tab (Logi sisse on this page) */
 .auth-tab.is-active {
-  background-color: #cdeeea; /* light teal, tweak if needed */
+  background-color: #cdeeea;
   color: var(--color-dark);
 }
 
-/* hover */
 .auth-tab:not(.is-active):hover {
   background-color: rgba(243, 249, 249, 0.8);
 }
 
-/* ===== FORM FIELDS ===== */
+/* FORM FIELDS */
 
 .auth-form {
   display: flex;
@@ -108,7 +101,6 @@
   color: var(--color-dark);
 }
 
-/* basic input style for auth */
 .auth-field input {
   width: 100%;
   border: 1px solid #e1f0f2;
@@ -130,7 +122,6 @@
   box-shadow: 0 0 0 1px rgba(8, 153, 147, 0.25);
 }
 
-/* password with eye icon */
 .auth-password-wrapper {
   display: flex;
   align-items: center;
@@ -160,7 +151,6 @@
   opacity: 0.9;
 }
 
-/* remember me + forgot password row */
 .auth-row {
   font-size: 0.9rem;
 }
@@ -193,20 +183,19 @@
   text-decoration: underline;
 }
 
-/* main submit button */
+/* submit */
 .auth-submit {
   width: 100%;
   margin-top: 0.5rem;
 }
 
-/* “või logi sisse” separator */
 .auth-separator {
   margin: 1.5rem 0 0.75rem;
   font-size: 0.9rem;
   color: var(--color-muted);
 }
 
-/* alternative login methods row */
+/* alternative login */
 .auth-alt-login {
   display: flex;
   gap: 1.5rem;
@@ -223,7 +212,7 @@
   text-decoration: underline;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
   .auth-main {

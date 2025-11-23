@@ -54,7 +54,7 @@
 /* left column */
 
 .payment-form-column {
-  background-color: #e9f5f5; /* same as page, form itself is white inputs */
+  background-color: #e9f5f5;
 }
 
 .payment-title {
@@ -177,8 +177,6 @@
   height: 16px;
 }
 
-/* submit button */
-
 .payment-submit {
   width: 100%;
   margin-top: 0.5rem;
@@ -191,8 +189,6 @@
   flex-direction: column;
   gap: 1.5rem;
 }
-
-/* teal plan card */
 
 .summary-plan-card .summary-plan-name,
 .summary-plan-card .summary-price,

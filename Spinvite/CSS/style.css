@@ -50,7 +50,7 @@ p {
   line-height: 1.6;
 }
 
-/* ===== DESIGN TOKENS ===== */
+/*DESIGN TOKENS */
 
 :root {
   --color-primary: #089993;
@@ -64,7 +64,7 @@ p {
   --shadow-soft: 0 4px 8px -2px rgba(23, 23, 23, 0.10);
 }
 
-/* ===== LAYOUT ===== */
+/* LAYOUT */
 
 .container {
   width: min(1120px, 100% - 3rem);
@@ -83,7 +83,7 @@ p {
   color: var(--color-muted);
 }
 
-/* ===== BUTTONS ===== */
+/* BUTTONS */
 
 .btn-primary,
 .btn-outline {
@@ -123,7 +123,7 @@ p {
   transform: translateY(-1px);
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 
 .navbar {
   position: sticky; /* stays at top when scrolling */
@@ -202,7 +202,7 @@ p {
   border: 1px solid var(--color-border-light);
   background-color: #ffffff;
   padding: 0;
-  margin-left: auto; /* pushes it right on mobile */
+  margin-left: auto;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -226,7 +226,7 @@ p {
   margin-left: 1.5rem;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 .footer {
   padding: 4rem 0 2rem;
   background-color: #ffffff;
@@ -239,7 +239,6 @@ p {
   gap: 4rem;
 }
 
-/* LEFT SIDE */
 .footer-left {
   flex: 1;
 }
@@ -266,7 +265,6 @@ p {
   display: block;
 }
 
-/* LINK COLUMNS */
 .footer-links {
   display: flex;
   gap: 4rem;
@@ -321,7 +319,7 @@ p {
   text-decoration: underline;
 }
 
-/* ===== LOGO BAR ===== */
+/* LOGO BAR */
 
 .logo-bar {
   padding: 2.5rem 0;
@@ -366,7 +364,7 @@ p {
 }
 
 
-/* ===== CONTACT SECTION ===== */
+/* CONTACT SECTION */
 
 .contact {
   padding: 5rem 0 4.5rem;
@@ -418,7 +416,6 @@ p {
   gap: 1.25rem;
 }
 
-/* two-column rows */
 .form-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -431,21 +428,18 @@ p {
   gap: 0.4rem;
 }
 
-/* full-width row (textarea) */
 .form-full {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
-/* labels */
 .contact-form label {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-dark);
 }
 
-/* inputs & textarea */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -474,20 +468,16 @@ p {
   color: rgba(17, 75, 95, 0.45);
 }
 
-/* focus style */
-.contact-form input:focus,
-.contact-form textarea:focus {
-  box-shadow: 0 0 0 2px rgba(8, 153, 147, 0.3);
-}
-
 /* button */
 .contact-form .btn-primary {
   margin-top: 0.75rem;
   align-self: flex-start;
 }
 
-/* responsive contact us */
-@media (max-width: 900px) {
+/* RESPONSIVE STYLES */
+
+/* contact us */
+@media (max-width: 860px) {
   .contact-inner {
     flex-direction: column;
     align-items: center;
@@ -499,8 +489,8 @@ p {
   }
 }
 
-/* --- RESPONSIVE  footer--- */
-@media (max-width: 900px) {
+/* footer */
+@media (max-width: 860px) {
   .footer-content {
     flex-direction: column;
     align-items: center;
@@ -521,50 +511,21 @@ p {
   }
 }
 
+/* NAVBAR (HAMBURGER) */
 
-/* ===== RESPONSIVE NAVBAR (HAMBURGER) ===== */
-
-@media (max-width: 768px) {
+@media (max-width: 860px) {
 
   .nav-container {
     padding-block: 0.9rem;
     gap: 0.75rem;
   }
 
-  /* show hamburger, hide desktop nav initially */
   .nav-toggle {
     display: inline-flex;
   }
 
   .nav-links,
   .auth-buttons {
-    display: none;          /* hidden until nav-open */
-  }
-
-  /* when navbar has .nav-open (you’ll add with JS later) */
-  .navbar.nav-open .nav-links,
-  .navbar.nav-open .auth-buttons {
-    display: flex;
-  }
-
-  .navbar.nav-open .nav-links {
-    width: 100%;
-    order: 10;
-    margin-top: 0.5rem;
-  }
-
-  .navbar.nav-open .nav-links ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .navbar.nav-open .auth-buttons {
-    width: 100%;
-    order: 11;
-    margin-left: 0;
-    margin-top: 0.75rem;
-    justify-content: flex-start;
-    gap: 0.75rem;
+    display: none;
   }
 }

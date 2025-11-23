@@ -5,16 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Makse – Spinvite</title>
 
-  <!-- DM Sans -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Shared + page-specific styles -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/payment.css" />
 </head>
 <body>
-
-  <!-- APP HEADER (logo + user) -->
   <header class="app-header">
     <div class="container app-header-inner">
       <a href="index.html" class="app-logo">
@@ -32,7 +27,6 @@
   <main class="payment-main">
     <div class="container payment-layout">
 
-      <!-- LEFT: CARD FORM -->
       <section class="payment-form-column">
         <h1 class="payment-title">Maksevahend</h1>
 
@@ -45,13 +39,11 @@
 
         <form class="payment-form">
 
-          <!-- Nimi kaardil -->
           <div class="payment-field">
             <label for="card-name">Nimi kaardil</label>
             <input type="text" id="card-name" name="card_name" placeholder="Mari Maasikas" />
           </div>
 
-          <!-- Kaardi number -->
           <div class="payment-field payment-field--card-number">
             <label for="card-number">Kaardi number</label>
             <div class="payment-input-with-icon">
@@ -65,7 +57,6 @@
             </div>
           </div>
 
-          <!-- aegub + turvakood -->
           <div class="payment-row">
             <div class="payment-field">
               <label for="card-expiry">Aegub</label>
@@ -78,35 +69,29 @@
             </div>
           </div>
 
-          <!-- arveldusaadress -->
           <div class="payment-field">
             <label for="billing-address">Arvelduse aadress</label>
             <input type="text" id="billing-address" name="billing_address" />
           </div>
 
-          <!-- ettevõtte pangakaart -->
           <label class="payment-checkbox">
             <input type="checkbox" name="business_card" checked />
             <span>Ettevõtte pangakaart</span>
           </label>
 
-          <!-- raamatupidamise e-post -->
           <div class="payment-field">
             <label for="accounting-email">Raamatupidamise e-posti aadress</label>
             <input type="email" id="accounting-email" name="accounting_email" />
           </div>
 
-          <!-- submit -->
           <button type="submit" class="btn-primary payment-submit">
             Liitu paketiga
           </button>
         </form>
       </section>
 
-      <!-- RIGHT: SUMMARY -->
       <section class="payment-summary-column">
 
-        <!-- Big teal card -->
         <div class="summary-plan-card">
           <p class="summary-plan-name">Spinvite Standard</p>
           <p class="summary-price">
@@ -119,7 +104,6 @@
           </p>
         </div>
 
-        <!-- White breakdown card -->
         <div class="summary-breakdown-card">
           <div class="summary-row summary-row--top">
             <div>
@@ -161,6 +145,5 @@
       </p>
     </div>
   </footer>
-
 </body>
 </html>

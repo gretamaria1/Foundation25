@@ -4,17 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Logi sisse – Spinvite</title>
-
-  <!-- DM Sans -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Shared + page-specific styles -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/auth.css" />
 </head>
 <body class="auth-body">
 
-  <!-- TOP BAR WITH LOGO -->
   <header class="auth-header">
     <div class="container auth-header-inner">
       <a href="index.html" class="auth-logo">
@@ -23,13 +19,9 @@
     </div>
   </header>
 
-  <!-- MAIN AREA -->
   <main class="auth-main">
-    <!-- background image will be set with CSS on .auth-main or .auth-hero -->
     <div class="auth-hero">
       <div class="auth-card">
-
-        <!-- TABS -->
         <div class="auth-tabs">
           <button class="auth-tab is-active" type="button">
             Logi sisse
@@ -39,9 +31,7 @@
           </a>
         </div>
 
-        <!-- LOGIN FORM -->
         <form class="auth-form">
-          <!-- E-MAIL -->
           <div class="auth-field">
             <label for="email">E-posti aadress</label>
             <input
@@ -53,7 +43,6 @@
             />
           </div>
 
-          <!-- PASSWORD -->
           <div class="auth-field">
             <label for="password">Salasõna</label>
             <div class="auth-password-wrapper">
@@ -64,14 +53,12 @@
                 placeholder="Sisesta oma salasõna"
                 required
               />
-              <!-- eye icon button (JS can toggle visibility later) -->
               <button class="password-toggle" type="button" aria-label="Näita salasõna">
                 <img src="images/Icons/eye.svg" alt="Eye icon" />
               </button>
             </div>
           </div>
 
-          <!-- REMEMBER + FORGOT -->
           <div class="auth-row auth-row--inline">
             <label class="remember-me">
               <input type="checkbox" name="remember" />
@@ -81,25 +68,19 @@
             <a href="#" class="forgot-link">Unustasid salasõna?</a>
           </div>
 
-          <!-- MAIN SUBMIT BUTTON -->
           <button type="submit" class="btn-primary auth-submit">
             Logi sisse
           </button>
 
-          <!-- SEPARATOR TEXT -->
           <p class="auth-separator">või logi sisse</p>
-
-          <!-- ALT LOGIN METHODS -->
           <div class="auth-alt-login">
             <a href="#">Smart-ID</a>
             <a href="#">ID-kaart</a>
             <a href="#">Mobiil-ID</a>
           </div>
         </form>
-
       </div>
     </div>
   </main>
-
 </body>
 </html>

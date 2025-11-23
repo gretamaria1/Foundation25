@@ -2,8 +2,6 @@ body {
   background-color: #e9f5f5;
 }
 
-/* app header (same style as payment / welcome pages) */
-
 .app-header-right {
     display: flex;
     gap: 1rem;
@@ -14,12 +12,11 @@ body {
   width: 100%;
   margin: 0;
 } 
-/* header logo (mainly visible on tablet/mobile) */
+
 .app-logo-header img {
   height: 34px;
 }
 
-/* hamburger – hidden on desktop by default */
 .app-menu-toggle {
   display: none;
   flex-direction: column;
@@ -83,11 +80,9 @@ body {
   font-size: 0.7rem;
 }
 
-/* layout shell */
-
 .app-shell {
   display: flex;
-  min-height: calc(100vh - 60px); /* header approx */
+  min-height: calc(100vh - 60px);
 }
 
 /* SIDEBAR */
@@ -139,11 +134,11 @@ body {
 }
 
 .sidebar-icon {
-  display: inline-flex;              /* was just inline */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 20px;
-  height: 20px;                      /* give it explicit height */
+  height: 20px;
 }
 
 .sidebar-item.is-active .sidebar-link {
@@ -177,8 +172,6 @@ body {
   font-size: 1.1rem;
 }
 
-/* search field */
-
 .dashboard-search {
   flex: 1;
 }
@@ -194,8 +187,6 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
   outline: none;
 }
-
-/* tabs row */
 
 .dashboard-tabs-row {
   display: flex;
@@ -236,8 +227,6 @@ body {
   background-color: var(--color-primary);
 }
 
-/* calendar link */
-
 .dashboard-calendar-link {
   font-size: 0.9rem;
   color: var(--color-primary);
@@ -255,8 +244,6 @@ body {
   gap: 1.5rem;
 }
 
-/* card container */
-
 .event-card {
   background-color: #ffffff;
   border-radius: 22px;
@@ -265,8 +252,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-/* header image */
 
 .event-card-header {
   position: relative;
@@ -280,8 +265,6 @@ body {
   object-fit: cover;
 }
 
-/* status pill */
-
 .event-status-pill {
   position: absolute;
   top: 0.85rem;
@@ -292,8 +275,6 @@ body {
   font-size: 0.8rem;
   font-weight: 600;
 }
-
-/* three-dot menu */
 
 .event-menu {
     position: absolute;
@@ -326,15 +307,11 @@ body {
   color: var(--color-muted);
 }
 
-/* footer with chart + legend */
-
 .event-card-footer {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
-/* simple donut chart using gradient */
 
 .event-chart {
   width: 60px;
@@ -385,29 +362,27 @@ body {
   background-color: #F0F7F7;
 }
 
-/* =============== RESPONSIVE DASHBOARD =============== */
+/* RESPONSIVE DASHBOARD */
 
-/* Tablets & down: sidebar becomes off-canvas with hamburger */
-@media (max-width: 960px) {
-  /* header */
+
+@media (max-width: 900px) {
+
   .app-header-inner {
     padding-inline: 1rem;
   }
 
   .app-menu-toggle {
-    display: inline-flex; /* show burger */
+    display: inline-flex;
   }
 
   .app-logo-header {
     display: inline-block;
   }
 
-  /* keep header user area */
   .app-user-name {
-    display: none; /* optional: hide name on very narrow header */
+    display: none; 
   }
 
-  /* app shell layout stays row; sidebar is fixed overlay */
   .app-shell {
     position: relative;
     min-height: calc(100vh - 60px);
@@ -416,7 +391,7 @@ body {
   /* OFF-CANVAS SIDEBAR */
   .sidebar {
     position: fixed;
-    top: 60px; /* header height */
+    top: 60px;
     left: 0;
     height: calc(100vh - 60px);
     width: 260px;
@@ -433,10 +408,9 @@ body {
     transform: translateX(0);
   }
 
-  /* overlay behind sidebar */
   .sidebar-overlay {
     position: fixed;
-    inset: 60px 0 0; /* below header */
+    inset: 60px 0 0;
     background: rgba(0, 0, 0, 0.25);
     display: none;
     z-index: 900;
@@ -446,7 +420,6 @@ body {
     display: block;
   }
 
-  /* sidebar nav back to vertical stack */
   .sidebar-nav {
     flex-direction: column;
     gap: 1.5rem;
@@ -463,7 +436,6 @@ body {
     display: block;
   }
 
-  /* main content padding slightly smaller */
   .dashboard-main {
     padding: 1.5rem 1.25rem 2.5rem;
   }
@@ -494,8 +466,7 @@ body {
   }
 }
 
-/* Phones */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .dashboard-main {
     padding: 1.25rem 1rem 2rem;
   }
@@ -520,8 +491,7 @@ body {
   }
 }
 
-/* Very small phones */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .event-card-body {
     padding: 1rem 1.1rem 1.1rem;
   }

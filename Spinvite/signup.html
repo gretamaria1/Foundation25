@@ -4,17 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registreeru – Spinvite</title>
-
-  <!-- DM Sans -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Shared + auth styles -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/auth.css" />
 </head>
 <body class="auth-body">
 
-  <!-- TOP BAR WITH LOGO -->
   <header class="auth-header">
     <div class="container auth-header-inner">
       <a href="index.html" class="auth-logo">
@@ -23,26 +19,20 @@
     </div>
   </header>
 
-  <!-- MAIN AREA -->
   <main class="auth-main">
     <div class="auth-hero">
       <div class="auth-card">
 
-        <!-- TABS -->
         <div class="auth-tabs">
-          <!-- Logi sisse tab goes to login page -->
           <a class="auth-tab" href="login.html">
             Logi sisse
           </a>
-          <!-- Registreeru is active on this page -->
           <button class="auth-tab is-active" type="button">
             Registreeru
           </button>
         </div>
 
-        <!-- SIGNUP FORM -->
         <form class="auth-form">
-          <!-- NAME ROW (Eesnimi / Perekonnanimi) -->
           <div class="auth-field auth-field--row">
             <div class="auth-field">
               <label for="firstname">Eesnimi</label>
@@ -67,7 +57,6 @@
             </div>
           </div>
 
-          <!-- EMAIL -->
           <div class="auth-field">
             <label for="email">E-posti aadress</label>
             <input
@@ -79,7 +68,6 @@
             />
           </div>
 
-          <!-- PASSWORD -->
           <div class="auth-field">
             <label for="password">Salasõna</label>
             <div class="auth-password-wrapper">
@@ -96,7 +84,6 @@
             </div>
           </div>
 
-          <!-- TERMS CHECKBOX -->
           <div class="auth-row">
             <label class="remember-me">
               <input type="checkbox" name="terms" required />
@@ -104,25 +91,19 @@
             </label>
           </div>
 
-          <!-- MAIN SUBMIT BUTTON -->
           <button type="submit" class="btn-primary auth-submit">
             Registreeru
           </button>
 
-          <!-- SEPARATOR TEXT -->
           <p class="auth-separator">või registreeru</p>
-
-          <!-- ALT LOGIN METHODS -->
           <div class="auth-alt-login">
             <a href="#">Smart-ID</a>
             <a href="#">ID-kaart</a>
             <a href="#">Mobiil-ID</a>
           </div>
         </form>
-
       </div>
     </div>
   </main>
-
 </body>
 </html>

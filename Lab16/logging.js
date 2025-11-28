@@ -1,4 +1,4 @@
-import {signup} from './auth.js';
+import {signup, login} from './auth.js';
 
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
@@ -19,14 +19,29 @@ signupBtn.addEventListener('click', async (e) => {
     //console.log ('Signup attempted with Email!', email, password);
     try {
         const user = await signup(email, password);
-        showMessage("signup successful. Welcome", user.email);
+        showMessage("signup successful. Welcome" + user.email);
         setTimeout(()=> {
-            window.location.ref = "app.html";
+            window.location.href = "app.html";
         }, 1000)
     }
-    catch {
+    catch (error) {
         showMessage (error.message, true);
     }
-    
-    //console.log(user);
 })
+
+loginBtn.addEventListener('click', async (e) => {
+    e.preventDefault ();
+    const email = emailInput.value;
+    const password = passwordInput.value;
+
+    try {
+        const user = await login(email, password);
+        showMessage ("Login successful. Welcome back " + user.email);
+        setTimeout (()=> {
+            window.location.href = "app.html";
+        }, 1000);
+    }
+    catch (error) {
+        showMessage(error.message, true);
+    }
+});

@@ -126,7 +126,7 @@ p {
 /* NAVBAR */
 
 .navbar {
-  position: sticky; /* stays at top when scrolling */
+  position: sticky;
   top: 0;
   z-index: 100;
   background-color: #ffffff;
@@ -138,7 +138,7 @@ p {
   align-items: center;
   justify-content: flex-start;
   gap: 2.5rem;
-  padding-block: 1.25rem; /* top & bottom */
+  padding-block: 1.25rem;
 }
 
 /* Logo */
@@ -169,29 +169,185 @@ p {
   color: var(--color-muted);
 }
 
-.nav-links li.nav-dropdown a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
+.nav-links a:hover {
+  color: var(--color-dark);
 }
 
-.nav-links li.nav-dropdown a::after {
-  content: '';
+/* Dropdown menu */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.nav-dropdown-toggle:hover {
+  color: var(--color-dark);
+}
+
+.nav-arrow {
   display: inline-block;
   width: 0;
   height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 5px solid var(--color-muted);
-  transition: border-top-color 0.15s ease;
+  transition: transform 0.2s ease, border-top-color 0.2s ease;
 }
 
-.nav-links li.nav-dropdown a:hover::after {
+.nav-dropdown-toggle:hover .nav-arrow {
   border-top-color: var(--color-dark);
 }
 
-.nav-links a:hover {
+.nav-mega {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  margin-top: 1rem;
+  transform: translate(-50%, 8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  width: min(1120px, calc(100vw - 3rem));
+  z-index: 80;
+}
+
+.nav-mega-inner {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+/*left side*/
+.nav-mega-links {
+  padding: 2.2rem 2.4rem;
+  display: grid;
+  gap: 3.5rem;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+}
+
+.nav-mega-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-mega-column h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
   color: var(--color-dark);
+}
+
+.nav-mega-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-items: start;
+  align-items: start;
+  text-align: left;
+}
+
+.nav-mega-column a {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.nav-mega-column a:hover {
+  color: var(--color-dark);
+}
+
+/* right side */
+.nav-mega-highlight {
+  padding: 2.6rem 2.6rem;
+  background-color: #F0F7F7;
+  border-left: 1px solid var(--color-border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.nav-mega-highlight h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.6rem;
+}
+
+.mega-highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.6rem 0.7rem 0.6rem 0.6rem;
+  border-radius: 18px;
+  text-decoration: none;
+  color: var(--color-dark);
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.mega-highlight-card:hover {
+  background-color: #e2f4f3;
+  transform: translateY(-1px);
+}
+
+.mega-highlight-icon {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.mega-highlight-icon img {
+  width: 42px;
+  height: 42px;
+}
+
+.mega-highlight-text p {
+  margin: 0.1rem 0 0;
+  font-size: 0.88rem;
+  color: var(--color-muted);
+}
+
+.mega-highlight-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.mega-arrow {
+  font-size: 1rem;
+}
+
+.nav-dropdown:hover .nav-mega {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.nav-dropdown:hover .nav-arrow {
+  transform: rotate(180deg);
 }
 
 .nav-toggle {

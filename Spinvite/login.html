@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/auth.css" />
+  <script src="logging.js" type ="module" defer></script>
 </head>
 <body class="auth-body">
 
@@ -31,7 +32,8 @@
           </a>
         </div>
 
-        <form class="auth-form">
+        <form class="auth-form" id="login-form">
+          <p id="message" class="auth-message"></p>
           <div class="auth-field">
             <label for="email">E-posti aadress</label>
             <input
@@ -68,7 +70,7 @@
             <a href="#" class="forgot-link">Unustasid salasõna?</a>
           </div>
 
-          <button type="submit" class="btn-primary auth-submit">
+          <button id="signin-btn" type="submit" class="btn-primary auth-submit">
             Logi sisse
           </button>
 

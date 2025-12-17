@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="dashboard.js" type="module" defer></script>
 </head>
 <body>
 
@@ -23,11 +24,18 @@
         <span></span>
       </button>
 
-      <div class="app-user">
-        <span class="app-user-name">Mari Maasikas</span>
-        <span class="app-user-avatar">M</span>
-        <span class="app-user-chevron">▾</span>
-      </div>
+      <details class="app-user">
+        <summary class="app-user-toggle">
+          <span class="app-user-name">Mari Maasikas</span>
+          <span class="app-user-avatar">M</span>
+          <span class="app-user-chevron" aria-hidden="true"></span>
+        </summary>
+
+        <div class="app-user-menu">
+          <a href="#" class="app-user-menu-item">Minu konto</a>
+          <button class="app-user-menu-item is-danger">Logi välja</button>
+        </div>
+      </details>
 
     </div>
 
@@ -138,7 +146,7 @@
 
     <main class="dashboard-main">
       <div class="dashboard-top">
-        <a href="#" class="btn-primary dashboard-new-event">
+        <a href="create-event.html" class="btn-primary dashboard-new-event">
           Loo uus üritus
           <span class="dashboard-new-icon">+</span>
         </a>

@@ -1,38 +1,59 @@
-import { signup } from "./auth.js";
+import { signup, login } from "./auth.js";
 
-const form = document.getElementById("signup-form");
+const signupForm = document.getElementById("signup-form");
+const signupMessage = document.getElementById("message");
 
-const firstNameInput = document.getElementById("firstname");
-const lastNameInput = document.getElementById("lastname");
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-const terms = document.querySelector('input[name="terms"]');
-const messageSection = document.getElementById("message");
+if (signupForm) {
+  signupForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-const showMessage = (message, isError = false) => {
-    messageSection.textContent = message;
-    messageSection.style.color = isError ? "red" : "green";
+    const firstName = document.getElementById("firstname").value;
+    const lastName = document.getElementById("lastname").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const termsChecked = document.querySelector('input[name="terms"]').checked;
+
+    if (!termsChecked) {
+      signupMessage.textContent = "Palun nõustu kasutustingimustega.";
+      signupMessage.style.color = "red";
+      return;
+    }
+
+    try {
+      const user = await signup(email, password, firstName, lastName);
+
+      signupMessage.textContent = "Registreerimine õnnestus!";
+      signupMessage.style.color = "green";
+
+      setTimeout(() => {
+        window.location.href = "dashboard.html";
+      }, 1500);
+
+    } catch (error) {
+      signupMessage.textContent = error.message;
+      signupMessage.style.color = "red";
+      console.error("Signup error:", error);
+    }
+  });
 }
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+const loginForm = document.querySelector(".auth-form");
 
-    const firstName = firstNameInput.value;
-    const lastName = lastNameInput.value;
-    const email = emailInput.value;
-    const password = passwordInput.value;
+if (loginForm && document.getElementById("signin-btn")) {
+  loginForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  console.log("Eesnimi:", firstNameInput.value);
-  console.log("Perekonnanimi:", lastNameInput.value);
-  console.log("Email:", emailInput.value);
-  console.log("Parool:", passwordInput.value);
-  console.log("Nõustun tingimustega:", terms.checked);
-  try {
-    const user = await signup (email, password);
-    showMessage("Successfully signed up" + user.email);
-  }
-    catch (error) {
-        //console.log("Signup error: ", error);
-        showMessage(`Signup error: ${error.message}`, true);
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    try {
+      const user = await login(email, password);
+
+      window.location.href = "dashboard.html";
+
+    } catch (error) {
+      alert(error.message);
+      console.error("Login error:", error);
     }
-});
+  });
+}

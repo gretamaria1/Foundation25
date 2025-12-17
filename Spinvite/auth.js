@@ -1,14 +1,20 @@
 import { auth } from './firebase.js';
 import {    createUserWithEmailAndPassword, 
             signInWithEmailAndPassword,
-            signOut 
+            signOut,
+            updateProfile 
         } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js";
 
 export const signup = async (email, password, firstName, lastName) => {
     try { 
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
-        console.log("Successfully created user: ", user);
+        
+        await updateProfile(user, {
+            displayName: `${firstName} ${lastName}`,
+        });
+
+        console.log("User created successfully: ", user);
         return user;
     }
     catch(error) {

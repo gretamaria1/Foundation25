@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel ="stylesheet" href="CSS/landing.css">
+    <script src="contact.js" type="module" defer></script>
 </head>
 <body>
     <header class="navbar">
@@ -40,7 +41,7 @@
                                             <li><a href="#">Mallide kasutamine</a></li>
                                             <li><a href="#">PDF-kutsed</a></li>
                                             <li><a href="#">Andmeväljade seadistamine</a></li>
-                                            <li><a href="#">Vabaregitsreerimine</a></li>
+                                            <li><a href="#">Vabaregistreerimine</a></li>
                                         </ul>
                                     </div>
 
@@ -289,7 +290,7 @@
                 </div>
       
                 <div class="contact-form-wrapper">
-                    <form class="contact-form">
+                    <form class="contact-form" id="contact-form">
                         <div class="form-row">
                             <div class="form-field">
                                 <label for="name">Nimi*</label>
@@ -318,6 +319,7 @@
                         </div>
 
                         <button type="submit" class="btn-primary">Saada sõnum</button>
+                        <p id="contact-status" class="contact-status"></p>
                     </form>
                 </div>
             </div>

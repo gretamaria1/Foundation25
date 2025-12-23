@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loo üritus – Ürituse andmed</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/createevent.css" />
+  <script src="create-event.js" type="module" defer></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="app-header">
+    <div class="container app-header-inner">
+      <a href="dashboard.html" class="app-logo-header">
+        <img src="images/Logos/Spinvite.svg" alt="Spinvite logo" />
+      </a>
+
+      <div class="app-header-right">
+        <button class="app-menu-toggle" type="button" aria-label="Ava menüü">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="app-user">
+          <span class="app-user-name">Mari Maasikas</span>
+          <span class="app-user-avatar">M</span>
+          <span class="app-user-chevron">▾</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <ul class="sidebar-section">
+          <li class="sidebar-item is-active">
+            <a href="dashboard.html" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/uritused.svg" alt="Üritused" />
+              </span>
+              <span>Üritused</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Osalejad.svg" alt="Osalejad" />
+              </span>
+              <span>Osalejad</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Kurtsed.svg" alt="Kutsed" />
+              </span>
+              <span>Kutsed</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Vormid.svg" alt="Vormid" />
+              </span>
+              <span>Vormid</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Statistika.svg" alt="Statistika" />
+              </span>
+              <span>Statistika</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Meedia.svg" alt="Meedia" />
+              </span>
+              <span>Meedia</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-heading">Haldus</div>
+
+        <ul class="sidebar-section">
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Tiim.svg" alt="Tiim" />
+              </span>
+              <span>Tiim</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Keeled.svg" alt="Keeled" />
+              </span>
+              <span>Keeled</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Seaded.svg" alt="Seaded" />
+              </span>
+              <span>Seaded</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Arveldus.svg" alt="Arveldus" />
+              </span>
+              <span>Arveldus</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <span class="sidebar-icon">
+                <img src="images/Icons/Juhendid.svg" alt="Juhendid" />
+              </span>
+              <span>Juhendid</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+      <div class="event-create-header">
+        <a class="event-back" href="dashboard.html" aria-label="Tagasi ürituste juurde">
+          ← Üritused
+        </a>
+        <h1 class="event-create-title">Ürituse andmed</h1>
+      </div>
+
+      <form class="event-form" id="event-step1-form">
+        <!-- Tüüpüritus -->
+        <div class="form-field">
+          <label for="eventType">Tüüpüritus</label>
+          <select id="eventType" name="eventType">
+            <option value="" selected disabled>Vali tüüpüritus</option>
+            <option value="conference">Konverents</option>
+            <option value="gala">Gala</option>
+            <option value="training">Koolitus</option>
+            <option value="other">Muu</option>
+          </select>
+        </div>
+
+        <!-- Ürituse nimi -->
+        <div class="form-field">
+          <label for="eventName">Ürituse nimi*</label>
+          <input id="eventName" name="eventName" type="text" placeholder="Nimi" required />
+        </div>
+
+        <!-- Ürituse algus -->
+        <div class="form-field">
+            <label for="startDate">Ürituse algus</label>
+
+            <div class="form-row two-col">
+                <input
+                    id="startDate"
+                    name="startDate"
+                    type="date"
+                    placeholder="pp/kk/aaaa"
+                />
+
+                <input
+                    id="startTime"
+                    name="startTime"
+                    type="time"
+                    aria-label="Algusaeg"
+                />
+            </div>
+        </div>
+
+        <!-- Ürituse lõpp -->
+        <div class="form-field">
+        <label for="endDate">Ürituse lõpp</label>
+
+        <div class="form-row two-col">
+            <input
+            id="endDate"
+            name="endDate"
+            type="date"
+            placeholder="pp/kk/aaaa"
+            />
+
+            <input
+            id="endTime"
+            name="endTime"
+            type="time"
+            aria-label="Lõpuaeg"
+            />
+        </div>
+        </div>
+
+        <!-- Ajavöönd -->
+        <div class="form-field">
+          <label for="timezone">Ajavöönd</label>
+          <select id="timezone" name="timezone">
+            <option value="Europe/Tallinn" selected>Euroopa/Tallinn – (GMT+03:00)</option>
+            <option value="Europe/Helsinki">Euroopa/Helsinki – (GMT+03:00)</option>
+            <option value="Europe/Riga">Euroopa/Riia – (GMT+03:00)</option>
+          </select>
+        </div>
+
+        <!-- Toggles -->
+        <div class="form-row toggles">
+          <label class="toggle">
+            <input type="checkbox" name="isOnline" />
+            <span>Online</span>
+          </label>
+
+          <label class="toggle">
+            <input type="checkbox" name="openRegistration" />
+            <span>Vabaregistreeringuga üritus</span>
+          </label>
+        </div>
+
+        <!-- Asukoht -->
+        <div class="form-field">
+          <label for="location">Asukoht</label>
+          <input id="location" name="location" type="text" placeholder="Asukoha nimi või aadress" />
+        </div>
+
+        <!-- RSVP tähtaeg -->
+        <div class="form-field">
+          <label for="rsvpDeadline">RSVP tähtaeg</label>
+          <input id="rsvpDeadline" name="rsvpDeadline" type="date" placeholder="pp/kk/aaaa" />
+        </div>
+
+        <!-- Dummy fields: osalejate arvud -->
+        <div class="form-section">
+          <h2 class="form-section-title">Osalejad</h2>
+
+          <div class="form-row three-col">
+            <div class="form-field">
+              <label for="totalParticipants">Osalejaid kokku</label>
+              <input id="totalParticipants" name="totalParticipants" type="number" min="0" placeholder="0" />
+            </div>
+
+            <div class="form-field">
+              <label for="attendingCount">Osaleb</label>
+              <input id="attendingCount" name="attendingCount" type="number" min="0" placeholder="0" />
+            </div>
+
+            <div class="form-field">
+              <label for="notAttendingCount">Ei osale</label>
+              <input id="notAttendingCount" name="notAttendingCount" type="number" min="0" placeholder="0" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="noAnswerCount">Pole vastanud</label>
+              <input id="noAnswerCount" name="noAnswerCount" type="number" min="0" placeholder="0" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Keeled -->
+        <div class="form-section">
+          <h2 class="form-section-title">Keeled</h2>
+
+          <label class="check">
+            <input type="checkbox" name="langEt" checked />
+            <span>eesti keel</span>
+          </label>
+
+          <label class="check">
+            <input type="checkbox" name="langEn" />
+            <span>inglise keel</span>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn-primary" type="submit">
+            Salvesta üritus →
+          </button>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

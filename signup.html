@@ -3,49 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Logi sisse – Spinvite</title>
+  <title>Registreeru – Spinvite</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/auth.css" />
-
-  <!-- Login & signup logic:
-       - logging.js handles form submission
-       - uses Firebase Auth to sign the user in -->
   <script src="logging.js" type ="module" defer></script>
+
 </head>
-<!-- to style the whole page background for auth screens -->
 <body class="auth-body">
 
-  <!-- AUTH HEADER -->
   <header class="auth-header">
     <div class="container auth-header-inner">
-      <!-- Logo links back to the landing page -->
       <a href="index.html" class="auth-logo">
         <img src="images/Logos/Spinvite.svg" alt="Spinvite logo">
       </a>
     </div>
   </header>
 
-  <!-- MAIN AUTH AREA -->
   <main class="auth-main">
     <div class="auth-hero">
       <div class="auth-card">
-        <!-- Tabs: highlight which screen the user is on (login vs signup) -->
+
         <div class="auth-tabs">
-          <!-- Current tab: Log in (button, not link, because we’re already here) -->
-          <button class="auth-tab is-active" type="button">
+          <a class="auth-tab" href="login.html">
             Logi sisse
-          </button>
-          <a class="auth-tab" href="signup.html">
-            Registreeru
           </a>
+          <button class="auth-tab is-active" type="button">
+            Registreeru
+          </button>
         </div>
 
-        <!-- id="login-form" used by logging.js to attach submit handler -->
-        <form class="auth-form" id="login-form">
-          <!-- Message area where JS can show success/error messages -->
+        <form class="auth-form" id="signup-form">
           <p id="message" class="auth-message"></p>
+          <div class="auth-field auth-field--row">
+            <div class="auth-field">
+              <label for="firstname">Eesnimi</label>
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                placeholder="Eesnimi"
+                required
+              />
+            </div>
+
+            <div class="auth-field">
+              <label for="lastname">Perekonnanimi</label>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="Perekonnanimi"
+                required
+              />
+            </div>
+          </div>
+
           <div class="auth-field">
             <label for="email">E-posti aadress</label>
             <input
@@ -73,21 +87,18 @@
             </div>
           </div>
 
-          <div class="auth-row auth-row--inline">
+          <div class="auth-row">
             <label class="remember-me">
-              <input type="checkbox" name="remember" />
-              <span>Mäleta mind</span>
+              <input type="checkbox" name="terms" required />
+              <span>Nõustun <a href="#" class="terms-link">kasutustingimustega</a></span>
             </label>
-
-            <a href="#" class="forgot-link">Unustasid salasõna?</a>
           </div>
 
-          <!-- Submit button triggers login via Firebase Auth in logging.js -->
-          <button id="signin-btn" type="submit" class="btn-primary auth-submit">
-            Logi sisse
+          <button id="signup-btn" type="submit" class="btn-primary auth-submit">
+            Registreeru
           </button>
 
-          <p class="auth-separator">või logi sisse</p>
+          <p class="auth-separator">või registreeru</p>
           <div class="auth-alt-login">
             <a href="#">Smart-ID</a>
             <a href="#">ID-kaart</a>
